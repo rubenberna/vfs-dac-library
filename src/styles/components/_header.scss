@@ -1,0 +1,16 @@
+.layout-blob {
+  position: absolute;
+  z-index: -1;
+}
+
+.header {
+  padding: 40px;
+  color: white;
+
+  &__title {
+    font-weight: 700;
+  }
+  &__sub-title {
+    font-weight: 400;
+  }
+}
