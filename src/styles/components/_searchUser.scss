@@ -1,0 +1,12 @@
+.rbt {
+  width: 225px;
+  #async-example {
+    overflow-y: hidden !important
+  }
+  input {
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+}

@@ -51,6 +51,8 @@
     "dist"
   ],
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "axios": "^0.21.1",
+    "node-sass": "^5.0.0",
+    "react-bootstrap-typeahead": "^5.1.4"
   }
 }
