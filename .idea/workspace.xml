@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66fee676-9121-4c83-a25b-0465ebdc5cb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/iconDelete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardNewAccess.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementDetails/UserManagementDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_common/AsyncAutocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_common/RegularAutocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/abstract/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/base/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/base/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/_userManagement.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/dac.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dac.api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/layoutBlob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/layoutBlob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchUser/SearchUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchUser/SearchUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/consts/api.consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/consts/api.consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/_searchUser.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_searchUser.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1rTHrOHMvmjN2txhCXykZ2OApYC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\code\vfs\vfs-dac-library\node_modules\prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66fee676-9121-4c83-a25b-0465ebdc5cb6" name="Default Changelist" comment="" />
+      <created>1618993364018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618993364018</updated>
+      <workItem from="1618993369778" duration="8953000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

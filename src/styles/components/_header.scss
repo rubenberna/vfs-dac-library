@@ -4,15 +4,5 @@
 }
 
 .header {
-  padding: 40px;
-  color: white;
-
-  &__title {
-    font-weight: 700;
-  }
-  &__sub-title {
-    font-weight: 400;
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
+  color: $color-white;
 }

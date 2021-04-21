@@ -1,0 +1,63 @@
+.user-management {
+  margin-top: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    &--board {
+      background: white;
+      padding: 30px;
+      width: 60%;
+      min-height: 45rem;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+      border-radius: 0.4rem;
+      margin-right: 4rem;
+
+      .table-bordered {
+        border: none;
+      }
+      tr {
+        &:hover {
+          background: transparent !important;
+          color: inherit;
+        }
+        td:last-child {
+          cursor: pointer;
+          background-color: white;
+          border: none;
+          text-align: center;
+        }
+
+        .form-control {
+          border: none;
+        }
+      }
+      .button-add-access {
+        align-self: flex-start;
+        box-shadow: 0 1rem 2rem rgba($color-grey-dark, .2);
+        border: none !important;
+        background-color: rgba($color-green, .8) !important;
+        outline: none;
+        padding: .9rem;
+        font-size: $small-font-size;
+        &:focus,
+        &:focus-visible,
+        &:active {
+          background-color: $color-green;
+          border: none;
+          box-shadow: 0 .5rem 1rem rgba($color-grey-dark, .2);
+        }
+      }
+    }
+
+    &--details {
+      width: 20%;
+      line-height: 2.5rem;
+    }
+  }
+}

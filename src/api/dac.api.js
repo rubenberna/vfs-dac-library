@@ -7,3 +7,12 @@ export const getUser = (name) =>
       name
     }
   })
+
+export const getUserSec = (userTk) =>
+  axios.get(URL_PATHS.GET_USER_SEC, {
+    params: {
+      user_tk: userTk
+    }
+  })
+
+export const getDAMInfo = () => axios.get(URL_PATHS.GET_DAM_INFO)

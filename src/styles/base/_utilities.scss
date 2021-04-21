@@ -1,0 +1,38 @@
+.u-padding-big {
+  padding: 4rem 0 0 4rem;
+}
+
+.u-flex {
+  display: flex;
+
+  &__horizontal {
+    flex-direction: row;
+  }
+  &__vertical {
+    flex-direction: column;
+  }
+}
+
+.u-justify-content {
+  &--center {
+    justify-content: center;
+  }
+  &--start {
+    justify-content: flex-start;
+  }
+  &--between {
+    justify-content: space-between;
+  }
+}
+
+.u-primary-color {
+  color: $color-primary-blue;
+}
+
+.u-letter-spacing {
+  letter-spacing: .5rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}

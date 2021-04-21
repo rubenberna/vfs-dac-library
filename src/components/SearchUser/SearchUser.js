@@ -1,43 +1,37 @@
-import React, { useState, Fragment } from 'react'
-import { AsyncTypeahead } from 'react-bootstrap-typeahead'
+import React, { useState } from 'react'
+import { AsyncAutocomplete } from '../_common/AsyncAutocomplete'
 import { getUser } from '../../api/dac.api'
-import 'react-bootstrap-typeahead/css/Typeahead.css'
 
-export const SearchUser = () => {
+export const SearchUser = ({ onSelectUser }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [options, setOptions] = useState([])
 
   const handleSearch = async (query) => {
     setIsLoading(true)
-    try {
-      const { data } = await getUser(query)
-      setOptions(data?.map((user) => ({ label: user.USER_NAME })))
-      setIsLoading(false)
-    } catch (e) {
-      setIsLoading(false)
-      console.log(e)
+    if (query) {
+      try {
+        const { data } = await getUser(query)
+        setOptions(data?.map((user) => ({ label: user.USER_NAME, ...user })))
+        setIsLoading(false)
+      } catch (e) {
+        setIsLoading(false)
+        console.log(e)
+      }
     }
   }
 
-  // Bypass client-side filtering by returning `true`. Results are already
-  // filtered by the search endpoint, so no need to do it again.
-  const filterBy = () => true
+  const handleSelection = (event, value) => {
+    onSelectUser(value)
+  }
 
   return (
-    <AsyncTypeahead
-      filterBy={filterBy}
-      id='async-example'
-      isLoading={isLoading}
-      labelKey='label'
-      minLength={3}
-      onSearch={handleSearch}
-      options={options}
-      placeholder='Search by name...'
-      renderMenuItemChildren={(option, props) => (
-        <Fragment>
-          <span>{option.label}</span>
-        </Fragment>
-      )}
-    />
+    <div className='u-padding-big u-flex'>
+      <AsyncAutocomplete
+        options={options}
+        handleSelection={handleSelection}
+        handleSearch={handleSearch}
+        isLoading={isLoading}
+      />
+    </div>
   )
 }

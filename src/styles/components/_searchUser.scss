@@ -1,12 +1,24 @@
 .rbt {
-  width: 225px;
+  align-self: flex-start;
   #async-example {
     overflow-y: hidden !important
   }
   input {
-    &:focus {
-      border-color: transparent;
-      box-shadow: none;
+    height: 100%;
+    font-size: $default-font-size;
+  }
+  a {
+    font-size: $small-font-size;
+  }
+}
+
+.async-autocomplete {
+  .MuiOutlinedInput-root {
+    background: $color-white;
+    fieldset {
+      border: none;
     }
   }
 }
+
+
