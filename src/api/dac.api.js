@@ -16,3 +16,10 @@ export const getUserSec = (userTk) =>
   })
 
 export const getDAMInfo = () => axios.get(URL_PATHS.GET_DAM_INFO)
+
+export const getDimensionData = (number) =>
+  axios.get(URL_PATHS.GET_DIMENSION_DATA, {
+    params: {
+      number
+    }
+  })

@@ -1,17 +1,19 @@
-import React, { Fragment } from 'react'
-import { UserManagementBoard } from './UserManagementBoard/UserManagementBoard'
+import React, { Fragment, useContext } from 'react'
 import { UserManagementDetails } from './UserManagementDetails/UserManagementDetails'
+import { UserManagementBoard } from './UserManagementBoard/UserManagementBoard'
+import { Context as UserContext } from '../../context/user/UserContext'
 
-export const UserManagement = ({ selectedUser, userSec, DAMInfo }) => {
-  const shouldDisplay = selectedUser && userSec
+export const UserManagement = () => {
+  const { state: { userSec, userDetails } } = useContext(UserContext)
+  const shouldDisplay = userSec && userDetails
 
   return (
     <Fragment>
       {shouldDisplay && (
         <div className='user-management'>
           <div className='user-management__container'>
-            <UserManagementBoard userSec={userSec} DAMInfo={DAMInfo} />
-            <UserManagementDetails selectedUser={selectedUser} />
+            <UserManagementBoard />
+            <UserManagementDetails />
           </div>
         </div>
       )}

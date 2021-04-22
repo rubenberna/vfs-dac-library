@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { AsyncAutocomplete } from '../_common/AsyncAutocomplete'
 import { getUser } from '../../api/dac.api'
+import { Context as UserContext } from '../../context/user/UserContext'
 
-export const SearchUser = ({ onSelectUser }) => {
+export const SearchUser = () => {
+  const { state, setUser, setUserSec } = useContext(UserContext)
   const [isLoading, setIsLoading] = useState(false)
   const [options, setOptions] = useState([])
 
@@ -21,7 +23,8 @@ export const SearchUser = ({ onSelectUser }) => {
   }
 
   const handleSelection = (event, value) => {
-    onSelectUser(value)
+    setUser(value)
+    setUserSec(value)
   }
 
   return (

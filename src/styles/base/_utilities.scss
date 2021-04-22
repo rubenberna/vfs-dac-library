@@ -26,7 +26,7 @@
 }
 
 .u-primary-color {
-  color: $color-primary-blue;
+  color: $color-dark-blue;
 }
 
 .u-letter-spacing {
@@ -35,4 +35,12 @@
 
 .u-margin-bottom-small {
   margin-bottom: 2rem;
+}
+
+.u-small-text {
+  font-size: $x-small-font-size !important;
+}
+
+.u-cursor-pointer {
+  cursor: pointer;
 }

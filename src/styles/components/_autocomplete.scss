@@ -1,0 +1,19 @@
+.async-autocomplete {
+  .MuiOutlinedInput-root {
+    background: $color-white;
+    font-size: $x-small-font-size;
+    fieldset {
+      border: none;
+    }
+  }
+}
+
+.regular-autocomplete {
+  .MuiOutlinedInput-root {
+    background: rgba($color-flower-four, .4);
+    font-size: $x-small-font-size;
+    fieldset {
+      border: none;
+    }
+  }
+}

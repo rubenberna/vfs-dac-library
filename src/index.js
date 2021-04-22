@@ -1,6 +1,7 @@
 import React from 'react'
 import { App } from './components/App'
+import { ContextWrapper } from './components/ContextWrapper'
 
 export const MainComponent = () => {
-  return <App />
+  return <ContextWrapper><App /></ContextWrapper>
 }

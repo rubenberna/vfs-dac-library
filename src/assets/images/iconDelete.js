@@ -1,16 +1,11 @@
-import React from 'react'
+import * as React from "react"
 
 export const IconDelete = (props) => {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      data-name='Layer 2'
-      viewBox='0 0 24 30'
-      width='1.6rem'
-      {...props}
-    >
-      <path d='M19 7a1 1 0 00-1 1v11.191A1.92 1.92 0 0115.99 21H8.01A1.92 1.92 0 016 19.191V8a1 1 0 00-2 0v11.191A3.918 3.918 0 008.01 23h7.98A3.918 3.918 0 0020 19.191V8a1 1 0 00-1-1zM20 4h-4V2a1 1 0 00-1-1H9a1 1 0 00-1 1v2H4a1 1 0 000 2h16a1 1 0 000-2zM10 4V3h4v1z' />
-      <path d='M11 17v-7a1 1 0 00-2 0v7a1 1 0 002 0zM15 17v-7a1 1 0 00-2 0v7a1 1 0 002 0z' />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" {...props} width="2rem" fill="#777777">
+      <path d="M26.844 78.948a5.184 5.184 0 005.184 5.185h35.949a5.18 5.18 0 005.18-5.185v-47.18H26.844v47.18zm38-56.978v-5.108a.994.994 0 00-.996-.994H36.152a.995.995 0 00-.996.994v5.108H23.454v4.976h53.092V21.97H64.844z" />
     </svg>
   )
 }
+
+export default IconDelete
