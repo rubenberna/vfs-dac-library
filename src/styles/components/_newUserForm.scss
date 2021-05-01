@@ -1,0 +1,41 @@
+.new-user-form {
+  width: 45%;
+  min-height: 30rem;
+  margin: 0 auto;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    float: left;
+    margin-bottom: 2rem;
+    color: $color-dark-blue;
+  }
+
+  &__group {
+    input, label {
+      font-size: $small-font-size !important;
+    }
+  }
+
+  &__action-component {
+    align-self: flex-end;
+    font-size: $small-font-size !important;
+    button.cancel-button {
+      padding: 0;
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+    &--success {
+      color: $color-dark-blue;
+      font-weight: 600;
+    }
+    &--error {
+      @extend .u-margin-right-small;
+      color: $color-danger;
+      font-weight: 600;
+    }
+  }
+}

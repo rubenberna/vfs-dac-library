@@ -2,4 +2,13 @@
   align-self: flex-start;
   font-size: $x-small-font-size !important;
   border: 1px solid $color-danger !important;
+  color: $color-danger !important;
+}
+
+.button-main {
+  @extend .u-margin-big;
+  @extend .u-default-text;
+  background-color: $color-teal-three !important;
+  color: $color-white !important;
+  font-weight: 600 !important;
 }

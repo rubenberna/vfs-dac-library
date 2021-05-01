@@ -1,17 +1,26 @@
 import createDataContextHelper from '../createDataContextHelper'
-import { getDAMInfo, getDimensionData } from '../../api/dac.api'
+import { getDAMInfo, getDimensionData, giveAccess } from '../../api/dac.api'
+import { defaultNewAccessValue } from '../../utils/newAccess.utils'
 
 const TYPES = {
-  SET_NEW_ACCESS_OPTIONS: 'newAccess/setNewAccessOptions'
+  SET_NEW_ACCESS_OPTIONS: 'newAccess/setNewAccessOptions',
+  CHANGE_NEW_ACCESS_VALUE: 'newAccess/changeNewAccessValue',
+  CLEAR_NEW_ACCESS_VALUES: 'newAccess/clearNewAccessValues',
+  TOGGLE_NEW_ACCESS_ROW: 'newAccess/toggleNewAccessRow'
+}
+
+const initialNewAccessValues = {
+  USER_TK: defaultNewAccessValue,
+  DAM_TK: defaultNewAccessValue,
+  DIMENSION_VALUE_TK: defaultNewAccessValue,
+  DIMENSION_VALUE_TK_2: defaultNewAccessValue,
+  DIMENSION_VALUE_TK_3: defaultNewAccessValue,
 }
 
 const initialState = {
-  options: {
-    damInfo: undefined,
-    dimension1: undefined,
-    dimension2: undefined,
-    dimension3: undefined
-  }
+  options: {},
+  newAccess: { ...initialNewAccessValues },
+  showNewAccessRow: false
 }
 
 const newAccessReducer = (state, action) => {
@@ -21,6 +30,14 @@ const newAccessReducer = (state, action) => {
         ...state.options,
         [action.key]: action.payload }
       }
+    case TYPES.CHANGE_NEW_ACCESS_VALUE:
+      return {...state, newAccess: {
+        ...state.newAccess, ...action.payload
+        }}
+    case TYPES.CLEAR_NEW_ACCESS_VALUES:
+      return { ...state, newAccess: initialNewAccessValues }
+    case TYPES.TOGGLE_NEW_ACCESS_ROW:
+      return {...state, showNewAccessRow: !state.showNewAccessRow }
     default:
       return state
   }
@@ -48,8 +65,33 @@ const loadDimensionData = dispatch => async () => {
   })
 }
 
+export const toggleNewAccessRow = dispatch => () => {
+  dispatch({
+    type: TYPES.TOGGLE_NEW_ACCESS_ROW
+  })
+}
+
+export const changeNewAccessValue = dispatch => (newValue) => {
+  dispatch({
+    type: TYPES.CHANGE_NEW_ACCESS_VALUE,
+    payload: newValue
+  })
+}
+
+export const clearNewAccessValues = dispatch => () => {
+  dispatch({
+    type: TYPES.CLEAR_NEW_ACCESS_VALUES
+  })
+}
+
+export const saveNewAccess = () => async (newAccessDetails) => {
+  const arrayOfItemValues = Object.entries(newAccessDetails).map(([key, item]) => ({ [key]: item.value }))
+  const payloadObj = Object.assign({}, ...arrayOfItemValues)
+  return await giveAccess(payloadObj)
+}
+
 export const {Provider, Context} = createDataContextHelper(
   newAccessReducer,
-  { loadDAMInfo, loadDimensionData },
+  { loadDAMInfo, loadDimensionData, changeNewAccessValue, saveNewAccess, toggleNewAccessRow, clearNewAccessValues },
   initialState
 )

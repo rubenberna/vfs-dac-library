@@ -1,5 +1,6 @@
 .user-management {
   margin-top: 7rem;
+  margin-bottom: 4rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10,13 +11,13 @@
     justify-content: space-between;
 
     &--board {
-      width: 65%;
+      width: 62%;
         &__paper {
           width: 100%;
           margin-bottom: 2rem;
-
+          padding: .5rem;
           &__table {
-            min-width: 75rem;
+            transition: .2s all;
             th, td {
               font-size: $small-font-size;
               color: $color-grey-FOUR;
@@ -34,25 +35,40 @@
             &__toolbar {
               padding-left: 2rem;
               padding-right: 1rem;
+              &--default {}
               &--highlight {
                 color: $color-danger;
                 background-color: rgba(245, 0, 87, 0.08);
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                .toolbar-action-container {
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                }
               }
               .table-title {
                 flex: 1 1 100%;
+                color: $color-grey-FOUR;
               }
             }
             &__new-access {
+             &--no-border {
+               border-bottom: none !important;
+             }
               button {
-                padding: 0 !important;
+                padding: 0;
+                &:hover {
+                  background-color: transparent !important;
+                }
               }
             }
           }
+          &__footer {
+            display: flex;
+            justify-content: flex-start;
+            padding: 0 10px 10px 60px;
+          }
         }
-
     }
 
     &--details {

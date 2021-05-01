@@ -5,8 +5,8 @@ import TableCell from '@material-ui/core/TableCell'
 import Checkbox from '@material-ui/core/Checkbox'
 
 const headCells = [
-  { id: 'DAM', disablePadding: true, label: 'Access Management' },
-  { id: 'dimOne', disablePadding: false, label: 'Market' },
+  { id: 'DAM', disablePadding: true, label: 'Data type' },
+  { id: 'dimOne', disablePadding: false, label: 'Legal Entity' },
   { id: 'dimTwo', disablePadding: false, label: 'Dealer' },
   { id: 'dimThree', disablePadding: false, label: 'Organization Unit' },
 ];
@@ -25,10 +25,10 @@ export const UserManagementBoardTableHead = (props) => {
             inputProps={{ 'aria-label': 'select all desserts' }}
           />
         </TableCell>
-        {headCells.map((headCell) => (
+        {headCells.map((headCell, idx) => (
           <TableCell
             key={headCell.id}
-            align='left'
+            align={idx === 0 ? 'left' : (idx === headCells.length - 1 ? 'right' : 'center' )}
             padding={headCell.disablePadding ? 'none' : 'default'}>
             {headCell.label}
           </TableCell>

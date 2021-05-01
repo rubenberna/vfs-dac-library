@@ -10,9 +10,11 @@ import { UserManagementBoardNewAccess } from './UserManagementBoardNewAccess'
 import { UserManagementBoardTableHead } from './UserManagementBoardTableHead'
 import { UserManagementBoardTableToolbar } from './UserManagementBoardTableToolbar'
 import { Context as UserContext } from '../../../context/user/UserContext'
+import { Context as NewAccessContext } from '../../../context/newAccess/NewAccessContext'
+import Button from '@material-ui/core/Button'
 
 const createRows = (access) => ({
-  accessId: access.DAM_TK,
+  accessId: access.USER_SEC_TK,
   accessName: access.DAM_NAME,
   market: access.DIMENSION_VALUE_NAME_1,
   dealer: access.DIMENSION_VALUE_NAME_2,
@@ -21,8 +23,9 @@ const createRows = (access) => ({
 
 export const UserManagementBoard = () => {
   const { state: { userSec } } = useContext(UserContext)
+  const { state: { showNewAccessRow }, toggleNewAccessRow } = useContext(NewAccessContext)
   const [selected, setSelected] = useState([]);
-  const [showNewRow, setShowNewRow] = useState(false)
+  const [animationActive, setAnimationActive] = useState(false)
 
   const rows = userSec?.map((access) => createRows(access))
 
@@ -39,31 +42,35 @@ export const UserManagementBoard = () => {
     const selectedIndex = selected.indexOf(accessId);
     let newSelected = [];
     if (selectedIndex === -1) {
-      newSelected = [...newSelected, accessId]
+      newSelected = [...selected, accessId]
     } else {
-      newSelected = newSelected.filter(currentAccess => currentAccess !== accessId)
+      newSelected = selected.filter(currentAccess => currentAccess !== accessId)
     }
     setSelected(newSelected);
   };
 
+  const handleRemoval = () => {
+    setSelected([])
+  }
+
   const isSelected = (accessId) => selected.indexOf(accessId) !== -1;
 
-  const toggleNewAccess = () => {
-    setShowNewRow(!showNewRow)
+  const rowAnimation = (rowIndex) => {
+    return animationActive && rowIndex === (rows.length.length -1 ) ? 'slideInLeft' : ''
   }
 
   return (
     <div className='user-management__container--board'>
       <Paper className='user-management__container--board__paper'>
-        <UserManagementBoardTableToolbar numSelected={selected.length} />
+        <UserManagementBoardTableToolbar selected={selected} handleRemoval={handleRemoval}/>
         <TableContainer>
           <Table
             className='user-management__container--board__paper__table'
             aria-labelledby="tableTitle"
             aria-label="enhanced table"
           >
-            { !showNewRow &&
-              <caption className='u-small-text u-cursor-pointer' onClick={toggleNewAccess}>Add another access</caption>
+            { !showNewAccessRow &&
+              <caption className='u-small-text u-cursor-pointer' onClick={toggleNewAccessRow}>Add another access</caption>
             }
             <UserManagementBoardTableHead
               numSelected={selected.length}
@@ -77,11 +84,12 @@ export const UserManagementBoard = () => {
                   return (
                     <TableRow
                       hover
+                      className={`${animationActive  && index === (rows.length -1) ? 'slideInLeft' : ''}`}
                       onClick={(event) => handleSelection(event, row.accessId)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={row.accessId}
+                      key={index}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
@@ -93,13 +101,13 @@ export const UserManagementBoard = () => {
                       <TableCell component="th" id={labelId} scope="row" padding="none">
                         {row.accessName}
                       </TableCell>
-                      <TableCell>{row.market}</TableCell>
-                      <TableCell>{row.dealer}</TableCell>
-                      <TableCell>{row.organizationUnit}</TableCell>
+                      <TableCell align="center" width='18%'>{row.market}</TableCell>
+                      <TableCell align="center" width='18%'>{row.dealer}</TableCell>
+                      <TableCell align="right" width='20%'>{row.organizationUnit}</TableCell>
                     </TableRow>
                   );
                 })}
-              { showNewRow && <UserManagementBoardNewAccess />}
+              { showNewAccessRow && <UserManagementBoardNewAccess handleAnimation={setAnimationActive}/>}
             </TableBody>
           </Table>
         </TableContainer>

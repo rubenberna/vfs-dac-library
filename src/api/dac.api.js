@@ -23,3 +23,16 @@ export const getDimensionData = (number) =>
       number
     }
   })
+
+export const giveAccess = accessDetails =>
+  axios.post(URL_PATHS.GIVE_ACCESS, { ...accessDetails })
+
+export const deleteAccess = USER_SEC_TK =>
+  axios.post(URL_PATHS.DELETE_ACCESS, { USER_SEC_TK })
+
+export const createUser = userDetails =>
+  axios.post(URL_PATHS.CREATE_USER, userDetails)
+
+export const deleteUser = USER_TK =>
+  axios.post(URL_PATHS.DELETE_USER, { USER_TK })
+

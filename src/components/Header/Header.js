@@ -6,8 +6,8 @@ export const Header = () => {
     <div>
       <LayoutBlob />
       <div className='header u-padding-big'>
-        <h2 className='heading-primary'>Let's give access</h2>
-        <h3 className='heading-secondary'>
+        <h2 className='heading-primary'>Let's give somebody access</h2>
+        <h3 className='heading-tertiary'>
           Who would you like to give access to?
         </h3>
       </div>

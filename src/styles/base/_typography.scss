@@ -4,12 +4,11 @@
 }
 
 .heading-secondary {
-  font-weight: 400;
-  font-size: $large-font-size;
+  @extend .u-letter-spacing;
+  text-transform: uppercase;
 }
 
 .heading-tertiary {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: $default-font-size;
+  font-weight: 400;
+  font-size: $large-font-size;
 }

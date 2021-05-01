@@ -3,7 +3,7 @@
 }
 
 .u-flex {
-  display: flex;
+  display: flex !important;
 
   &__horizontal {
     flex-direction: row;
@@ -29,18 +29,49 @@
   color: $color-dark-blue;
 }
 
+.u-color-danger {
+  color: $color-danger;
+}
+
+.u-background-white {
+  background: $color-white !important;
+}
+
 .u-letter-spacing {
   letter-spacing: .5rem;
+}
+
+.u-margin-big {
+  margin: 4rem !important;
 }
 
 .u-margin-bottom-small {
   margin-bottom: 2rem;
 }
 
+.u-margin-right-x-small {
+  margin-right: .5rem !important;
+}
+.u-margin-right-small {
+  margin-right: 1rem !important;
+}
+
 .u-small-text {
   font-size: $x-small-font-size !important;
 }
 
+.u-text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.u-default-text {
+  font-size: $small-font-size !important;
+}
+
 .u-cursor-pointer {
   cursor: pointer;
+}
+
+.u-cursor-disabled {
+  cursor: not-allowed !important;
 }
