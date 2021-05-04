@@ -25,6 +25,12 @@
   }
 }
 
+.u-align-items {
+  &--center {
+    align-items: center;
+  }
+}
+
 .u-primary-color {
   color: $color-dark-blue;
 }
