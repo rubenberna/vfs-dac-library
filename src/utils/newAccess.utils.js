@@ -27,8 +27,9 @@ export const createNewAccessOptionsList = newAccessOptionsContext => {
 
 export const createNewAccessOptionsFields = (arrayOfOptions, handleChangeCallback, fullOptionsList, newAccessContext) => {
   return arrayOfOptions.map(option => ({
-    handleChange: (selection) => handleChangeCallback({ [option.property]: selection || defaultNewAccessValue }),
-    items: fullOptionsList[option.dimension].map(item => createOptions(item[option.targetValue], item[option.label])),
-    value: newAccessContext[option.targetValue]
-  }))
+      handleChange: (selection) => handleChangeCallback({ [option.property]: selection || defaultNewAccessValue }),
+      items: fullOptionsList[option.dimension].map(item => createOptions(item[option.targetValue], item[option.label])),
+      value: newAccessContext[option.property]
+    })
+  )
 }
