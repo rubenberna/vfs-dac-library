@@ -34,7 +34,6 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
   });
 
   const newAccessOptionsList = createNewAccessOptionsList(options)
-  console.log({newAccessOptionsList})
   const [noDefaultValueNeeded, ...itemsWithDefaultValues] = newAccessOptionsList
   const newAccessesOptions = createNewAccessOptionsFields(newAccessOptionsList, changeNewAccessValue, options, newAccess)
 
@@ -64,7 +63,6 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
 
   const handleSave = async () => {
     if (formIsComplete) {
-      console.log('yes')
       setIsLoading(true)
       await saveNewAccess(newAccess)
       await setUserSec(userDetails)

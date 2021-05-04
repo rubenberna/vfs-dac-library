@@ -1,6 +1,6 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField'
-import Autocomplete from '@material-ui/lab/Autocomplete'
+import { Autocomplete } from '@material-ui/lab'
 
 export const RegularAutocomplete = ({ options, handleChange, value }) => {
   return (
