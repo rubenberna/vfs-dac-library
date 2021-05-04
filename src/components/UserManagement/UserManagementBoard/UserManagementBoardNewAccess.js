@@ -34,6 +34,7 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
   });
 
   const newAccessOptionsList = createNewAccessOptionsList(options)
+  console.log({newAccessOptionsList})
   const [noDefaultValueNeeded, ...itemsWithDefaultValues] = newAccessOptionsList
   const newAccessesOptions = createNewAccessOptionsFields(newAccessOptionsList, changeNewAccessValue, options, newAccess)
 
@@ -74,6 +75,7 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
   }
   const AnimatedRow = animated(TableRow)
 
+  console.log(newAccessesOptions)
   return (
     <AnimatedRow style={fadeStyles} className="user-management__container--board__paper__table__new-access">
       <TableCell className="user-management__container--board__paper__table__new-access--no-border">
@@ -90,7 +92,7 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
           />
         </TableCell>
       ))}
-      <TableCell className="u-flex u-flex__vertical">
+      <TableCell className="user-management__container--board__paper__table__new-access--no-border u-flex u-flex__vertical">
         <Tooltip title={formIsComplete ? "Confirm" : "Still some fields missing"} placement="right" >
           <IconButton aria-label="confirm" className={formIsComplete ? 'u-cursor-pointer' : 'u-cursor-disabled'} onClick={handleSave}>
             <IconConfirm color={dynamicIconColor()}/>
