@@ -131,11 +131,11 @@ export const NewUserForm = ({ toggleForm }) => {
           ))}
         </Grid>
       </div>
-      <div className="new-user-form__action-component u-flex">
+      <div className="new-user-form__action-component u-flex u-align-items--center">
         { renderActionComponent() }
         { !!errors.length && message && message.type === 'error' &&
           <IconButton className="cancel-button" onClick={clearErrorsAndMessage}>
-            <IconCancel/>
+            <IconCancel width={17}/>
           </IconButton>
         }
       </div>

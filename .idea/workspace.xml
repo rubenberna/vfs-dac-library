@@ -5,74 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66fee676-9121-4c83-a25b-0465ebdc5cb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/assets/images/iconCancel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/assets/images/iconSave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/NewUserForm/NewUserForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/_common/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_animations.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_vendor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/components/_newUserForm.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/utils/newAccess.utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/utils/newUser.util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/iconCancel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/iconSave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NewUserForm/NewUserForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_common/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/base/_animations.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/base/_vendor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/_newUserForm.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/newAccess.utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/newUser.util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/api/dac.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/api/dac.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/assets/images/iconConfirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/assets/images/iconConfirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/assets/images/layoutBlob.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/assets/images/layoutBlob.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/SearchUser/SearchUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/SearchUser/SearchUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoardNewAccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoardNewAccess.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableHead.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableHead.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementDetails/UserManagementDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/UserManagement/UserManagementDetails/UserManagementDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/_common/RegularAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/components/_common/RegularAutocomplete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/consts/api.consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/consts/api.consts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/context/newAccess/NewAccessContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/context/newAccess/NewAccessContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/context/user/UserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/context/user/UserContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/abstract/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/abstract/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/base/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/components/_userManagement.scss" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/components/_userManagement.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/src/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/dac.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dac.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/iconConfirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/iconConfirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/layoutBlob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/layoutBlob.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchUser/SearchUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchUser/SearchUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardNewAccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardNewAccess.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableHead.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableHead.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardTableToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserManagement/UserManagementDetails/UserManagementDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementDetails/UserManagementDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_common/RegularAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_common/RegularAutocomplete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consts/api.consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/consts/api.consts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/newAccess/NewAccessContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/newAccess/NewAccessContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/user/UserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/user/UserContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/abstract/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstract/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/_userManagement.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_userManagement.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/example/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/example/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,8 +36,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\code\vfs\vfs-dac-library\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -119,6 +57,7 @@
       <workItem from="1619443794590" duration="2377000" />
       <workItem from="1619598762023" duration="19381000" />
       <workItem from="1619773960173" duration="14030000" />
+      <workItem from="1619859939064" duration="2344000" />
     </task>
     <servers />
   </component>
