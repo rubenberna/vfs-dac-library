@@ -75,7 +75,6 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
   }
   const AnimatedRow = animated(TableRow)
 
-  console.log(newAccessesOptions)
   return (
     <AnimatedRow style={fadeStyles} className="user-management__container--board__paper__table__new-access">
       <TableCell className="user-management__container--board__paper__table__new-access--no-border">
