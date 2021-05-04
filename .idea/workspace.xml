@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="66fee676-9121-4c83-a25b-0465ebdc5cb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/example/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/example/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardNewAccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserManagement/UserManagementBoard/UserManagementBoardNewAccess.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_common/RegularAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_common/RegularAutocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/newAccess.utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/newAccess.utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
