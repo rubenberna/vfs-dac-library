@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66fee676-9121-4c83-a25b-0465ebdc5cb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/%USERPROFILE%/.npmrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/node_modules/vfs-dac-library/%USERPROFILE%/.npmrc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +57,22 @@
       <workItem from="1619773960173" duration="14030000" />
       <workItem from="1619859939064" duration="2344000" />
       <workItem from="1620146088672" duration="1805000" />
+      <workItem from="1620202786499" duration="353000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
