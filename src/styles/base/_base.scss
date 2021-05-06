@@ -18,6 +18,11 @@ body {
   color: $color-grey-FOUR;
 }
 
+.dac-library {
+  width: 100%;
+  height: 100%;
+}
+
 input {
   &:focus {
     border-color: transparent;
