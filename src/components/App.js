@@ -21,9 +21,13 @@ export const App = () => {
   }
 
   useEffect(() => {
-    login()
-    loadDAMInfo()
-    loadDimensionData()
+    ;(async () => {
+      await login()
+      await Promise.all([
+        loadDAMInfo(),
+        loadDimensionData()
+      ])
+    })()
   }, [])
 
   return (

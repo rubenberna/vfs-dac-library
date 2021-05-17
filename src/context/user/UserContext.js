@@ -1,6 +1,6 @@
 import createDataContextHelper from '../createDataContextHelper'
 import { getUserSec, deleteAccess, getUser } from '../../api/dac.api'
-import { getAccessToken } from '../../utils/security.util'
+import { msalAcquireTokenSilent } from '../../utils/security.util'
 
 const TYPES = {
   SET_USER_DETAILS: 'user/setUserDetails',
@@ -72,8 +72,7 @@ const clearUser = dispatch => () => {
 }
 
 export const login = (dispatch) => async () => {
-  const token = await getAccessToken()
-  console.log({ token })
+  await msalAcquireTokenSilent()
 }
 
 export const { Provider, Context } = createDataContextHelper(
