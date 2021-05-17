@@ -9,7 +9,6 @@ import IconButton from '@material-ui/core/IconButton';
 import { IconConfirm } from '../../../assets/images/iconConfirm'
 import { Context as NewAccessContext } from '../../../context/newAccess/NewAccessContext'
 import { Context as UserContext } from '../../../context/user/UserContext'
-import { useSpring, animated, config } from 'react-spring'
 import {
   getDefaultValue,
   createNewAccessOptionsFields,
@@ -24,14 +23,6 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
   const newAccessKeys = Object.keys(newAccess).length;
   const nrOfInputValues = Object.values(newAccess).filter(item => item.value).length
   const formIsComplete = newAccessKeys === nrOfInputValues
-
-  const fadeStyles = useSpring({
-    config: { ...config.gentle },
-    from: { opacity: 0 },
-    to: {
-      opacity: showNewAccessRow ? 1 : 0
-    }
-  });
 
   const newAccessOptionsList = createNewAccessOptionsList(options)
   const [noDefaultValueNeeded, ...itemsWithDefaultValues] = newAccessOptionsList
@@ -71,10 +62,9 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
       toggleNewAccessRow()
     }
   }
-  const AnimatedRow = animated(TableRow)
 
   return (
-    <AnimatedRow style={fadeStyles} className="user-management__container--board__paper__table__new-access">
+    <TableRow className="user-management__container--board__paper__table__new-access">
       <TableCell className="user-management__container--board__paper__table__new-access--no-border">
         { isLoading &&
           <CircularProgress />
@@ -101,6 +91,6 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
           </IconButton>
         </Tooltip>
       </TableCell>
-    </AnimatedRow>
+    </TableRow>
   )
 }

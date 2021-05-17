@@ -46,7 +46,6 @@
     "@material-ui/lab": "^4.0.0-alpha.58",
     "axios": "^0.21.1",
     "node-sass": "^5.0.0",
-    "react-spring": "^9.1.2",
     "vfs-msal-auth": "^1.0.7"
   }
 }

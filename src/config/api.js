@@ -6,29 +6,31 @@ export const client = axios.create({
   baseURL: 'https://vfs-dac-api-prod.azurewebsites.net/api/'
 })
 
-client.interceptors.request.use(async (config) => {
-  await msalAcquireTokenSilent();
-  const token = LocalStorageUtil.getAccessToken();
-  if (token) {
-    config.headers['Authorization'] = 'Bearer ' + token;
-  }
-  return config;
-}, (error) => {
-  return Promise.reject(error);
-});
-
-client.interceptors.response.use(
-  (response) => {
-    return response
-  },
-  async (error) => {
-    const originalRequest = error.config;
-    if (error.response && error.response.status === 401) {
-      await msalAcquireTokenSilent();
-      axios.defaults.headers.common['Authorization'] = 'Bearer ' + LocalStorageUtil.getAccessToken();
-      originalRequest.headers['Authorization'] = 'Bearer ' + LocalStorageUtil.getAccessToken();
-      return axios(originalRequest);
+export const setAuthInterceptors = () => {
+  client.interceptors.request.use(async (config) => {
+    const token = LocalStorageUtil.getAccessToken();
+    if (token) {
+      config.headers['Authorization'] = 'Bearer ' + token;
     }
+    return config;
+  }, (error) => {
     return Promise.reject(error);
-  }
-);
+  });
+
+  client.interceptors.response.use(
+    (response) => {
+      return response
+    },
+    async (error) => {
+      console.log('error')
+      const originalRequest = error.config;
+      if (error.response && error.response.status === 401) {
+        await msalAcquireTokenSilent();
+        axios.defaults.headers.common['Authorization'] = 'Bearer ' + LocalStorageUtil.getAccessToken();
+        originalRequest.headers['Authorization'] = 'Bearer ' + LocalStorageUtil.getAccessToken();
+        return axios(originalRequest);
+      }
+      return Promise.reject(error);
+    }
+  )
+}

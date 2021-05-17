@@ -1,6 +1,7 @@
 import createDataContextHelper from '../createDataContextHelper'
 import { getUserSec, deleteAccess, getUser } from '../../api/dac.api'
 import { msalAcquireTokenSilent } from '../../utils/security.util'
+import { setAuthInterceptors } from '../../config/api'
 
 const TYPES = {
   SET_USER_DETAILS: 'user/setUserDetails',
