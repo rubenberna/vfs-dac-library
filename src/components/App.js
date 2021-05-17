@@ -10,7 +10,7 @@ import '../styles/main.scss'
 
 export const App = () => {
   const { loadDAMInfo, loadDimensionData } = useContext(NewAccessContext)
-  const { state: { userDetails }, clearUser } = useContext(UserContext)
+  const { state: { userDetails }, clearUser, login } = useContext(UserContext)
   const [showNewUserForm, setShowNewUserForm] = useState(false)
 
   const toggleForm = () => {
@@ -21,6 +21,7 @@ export const App = () => {
   }
 
   useEffect(() => {
+    login()
     loadDAMInfo()
     loadDimensionData()
   }, [])
