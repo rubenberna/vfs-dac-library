@@ -9,7 +9,7 @@ export const RegularAutocomplete = ({ options, handleChange, value }) => {
       autoHighlight
       options={options}
       value={{ ...value }}
-      getOptionLabel={(option) => option.label}
+      getOptionLabel={(option) => option && option.label}
       onChange={(e, value) => handleChange(value)}
       renderInput={(params) => (
         <TextField {...params} variant='outlined' placeholder='Type ahead'/>
@@ -17,7 +17,3 @@ export const RegularAutocomplete = ({ options, handleChange, value }) => {
     />
   )
 }
-
-// getOptionSelected={(option) => {
-//   console.log(option)
-// }}

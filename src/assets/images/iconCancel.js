@@ -1,8 +1,8 @@
 import * as React from "react"
 
-export const IconCancel = ({ color = "#202a44" }) => {
+export const IconCancel = ({ color = "#202a44", width = 25 }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40" width={25} fill={color} fillOpacity="0.6">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40" width={width} fill={color} fillOpacity="0.6">
       <path d="M16 2C8.28 2 2 8.28 2 16s6.28 14 14 14 14-6.28 14-14S23.72 2 16 2zm0 25C9.935 27 5 22.065 5 16S9.935 5 16 5s11 4.935 11 11-4.935 11-11 11z" />
       <path d="M21.628 10.372a1.5 1.5 0 00-2.121 0L16 13.879l-3.507-3.507a1.5 1.5 0 10-2.121 2.121L13.879 16l-3.507 3.507a1.5 1.5 0 102.122 2.121L16 18.121l3.507 3.507c.293.293.677.439 1.061.439s.768-.146 1.061-.439a1.5 1.5 0 000-2.121L18.121 16l3.507-3.507a1.5 1.5 0 000-2.121z" />
     </svg>

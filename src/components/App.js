@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react'
+import React, { useEffect, useContext, useState, Fragment } from 'react'
 import { Header } from './Header/Header'
 import { UserManagement } from './UserManagement/UserManagement'
 import { SearchUser } from './SearchUser/SearchUser'
@@ -6,12 +6,15 @@ import { Context as NewAccessContext } from '../context/newAccess/NewAccessConte
 import { Context as UserContext } from '../context/user/UserContext'
 import Button from '@material-ui/core/Button';
 import { NewUserForm } from './NewUserForm/NewUserForm'
+import { NotAdmin } from './NotAdmin/NotAdmin'
 import '../styles/main.scss'
 
 export const App = () => {
   const { loadDAMInfo, loadDimensionData } = useContext(NewAccessContext)
-  const { state: { userDetails }, clearUser } = useContext(UserContext)
+  const { state: { userDetails }, clearUser, login } = useContext(UserContext)
   const [showNewUserForm, setShowNewUserForm] = useState(false)
+
+  const isAdmin = false;
 
   const toggleForm = () => {
     if (userDetails) {
@@ -21,12 +24,17 @@ export const App = () => {
   }
 
   useEffect(() => {
-    loadDAMInfo()
-    loadDimensionData()
+    ;(async () => {
+      await login()
+      await Promise.all([
+        loadDAMInfo(),
+        loadDimensionData()
+      ])
+    })()
   }, [])
 
-  return (
-    <div>
+  const AdminContent = () => (
+    <Fragment>
       <Header />
       <SearchUser />
       <Button
@@ -39,6 +47,18 @@ export const App = () => {
       </Button>
       { showNewUserForm && !userDetails && <NewUserForm toggleForm={toggleForm}/> }
       <UserManagement />
+    </Fragment>
+  )
+
+  return (
+    <div className='dac-library'>
+      {
+        isAdmin ?
+          <AdminContent/>
+          :
+          <NotAdmin/>
+      }
+
     </div>
   )
 }

@@ -12,12 +12,16 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   font-size: $default-font-size;
+}
+
+.dac-library {
+  width: 100%;
+  height: 100%;
   color: $color-grey-FOUR;
-  background-color: $color-grey-one;
 }
 
 input {
