@@ -5,17 +5,8 @@ const LocalStorageUtil = (() => {
     localStorage.setItem(ACCESS_TOKEN, token)
   };
 
-  const _setAccount = (account) => {
-    localStorage.setItem(ACCOUNT, JSON.stringify(account));
-  };
-
   const _getAccessToken = () => {
     return localStorage.getItem(ACCESS_TOKEN)
-  };
-
-  const _getAccount = () => {
-    const accountString = localStorage.getItem(ACCOUNT);
-    return accountString ? JSON.parse(accountString) : null;
   };
 
   const _removeAccessToken = () => {
@@ -24,9 +15,7 @@ const LocalStorageUtil = (() => {
 
   return {
     setAccessToken: _setAccessToken,
-    setAccount: _setAccount,
     getAccessToken: _getAccessToken,
-    getAccount: _getAccount,
     removeAccessToken: _removeAccessToken
   }
 })()
