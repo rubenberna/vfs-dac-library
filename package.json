@@ -1,6 +1,6 @@
 {
   "name": "vfs-dac-library",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Data access control npm package for VFS data portal",
   "author": "Ruben Bernardes",
   "license": "MIT",
@@ -46,6 +46,6 @@
     "@material-ui/lab": "^4.0.0-alpha.58",
     "axios": "^0.21.1",
     "node-sass": "^5.0.0",
-    "vfs-msal-auth": "^1.0.7"
+    "vfs-msal-auth": "^1.0.8"
   }
 }
