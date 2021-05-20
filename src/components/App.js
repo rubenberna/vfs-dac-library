@@ -1,20 +1,14 @@
 import React, { useEffect, useContext, useState, Fragment } from 'react'
-import { Header } from './Header/Header'
-import { UserManagement } from './UserManagement/UserManagement'
-import { SearchUser } from './SearchUser/SearchUser'
 import { Context as NewAccessContext } from '../context/newAccess/NewAccessContext'
 import { Context as UserContext } from '../context/user/UserContext'
-import Button from '@material-ui/core/Button';
-import { NewUserForm } from './NewUserForm/NewUserForm'
-import { NotAdmin } from './NotAdmin/NotAdmin'
+import { LogoLoader } from './_common/LogoLoader'
+import { ContentWrapper } from './ContentWrapper/ContentWrapper'
 import '../styles/main.scss'
 
 export const App = () => {
   const { loadDAMInfo, loadDimensionData } = useContext(NewAccessContext)
-  const { state: { userDetails }, clearUser, login } = useContext(UserContext)
+  const { state: { userDetails, userIsAdmin, loading }, clearUser, login, isLoggedInUserAdmin, setLoading } = useContext(UserContext)
   const [showNewUserForm, setShowNewUserForm] = useState(false)
-
-  const isAdmin = false;
 
   const toggleForm = () => {
     if (userDetails) {
@@ -25,7 +19,10 @@ export const App = () => {
 
   useEffect(() => {
     ;(async () => {
+      setLoading(true)
       await login()
+      await isLoggedInUserAdmin()
+      setLoading(false)
       await Promise.all([
         loadDAMInfo(),
         loadDimensionData()
@@ -33,32 +30,15 @@ export const App = () => {
     })()
   }, [])
 
-  const AdminContent = () => (
+  return (
     <Fragment>
-      <Header />
-      <SearchUser />
-      <Button
-        variant="contained"
-        className='button-main'
-        onClick={toggleForm}>
-        {
-          !showNewUserForm ? 'Add user' : 'Cancel'
-        }
-      </Button>
-      { showNewUserForm && !userDetails && <NewUserForm toggleForm={toggleForm}/> }
-      <UserManagement />
+      { loading
+        ?
+        <LogoLoader/>
+        :
+        <ContentWrapper toggleForm={toggleForm} showNewUserForm={showNewUserForm}/>
+      }
     </Fragment>
   )
-
-  return (
-    <div className='dac-library'>
-      {
-        isAdmin ?
-          <AdminContent/>
-          :
-          <NotAdmin/>
-      }
-
-    </div>
-  )
 }
+

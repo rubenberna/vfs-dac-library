@@ -36,3 +36,16 @@ export const createUser = userDetails =>
 export const deleteUser = USER_TK =>
   client.post(URL_PATHS.DELETE_USER, { USER_TK })
 
+export const findAdminByEmail = email =>
+  client.get(URL_PATHS.FIND_ADMIN, {
+    params: {
+      email
+    }
+  })
+
+export const addAdmin = user_tk =>
+  client.post(URL_PATHS.ADD_ADMIN, { user_tk })
+
+export const deleteAdmin = user_tk => 
+  client.post(URL_PATHS.DELETE_ADMIN, { user_tk })
+

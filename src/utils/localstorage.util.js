@@ -13,10 +13,21 @@ const LocalStorageUtil = (() => {
     return localStorage.removeItem(ACCESS_TOKEN)
   };
 
+  const _setAccount = (account: Account) => {
+    localStorage.setItem(ACCOUNT, JSON.stringify(account));
+  };
+
+  const _getAccount = () => {
+    const accountString = localStorage.getItem(ACCOUNT);
+    return accountString ? JSON.parse(accountString) : null;
+  };
+
   return {
     setAccessToken: _setAccessToken,
     getAccessToken: _getAccessToken,
-    removeAccessToken: _removeAccessToken
+    removeAccessToken: _removeAccessToken,
+    setAccount: _setAccount,
+    getAccount: _getAccount
   }
 })()
 
