@@ -8,7 +8,7 @@ import { NewUserForm } from '../NewUserForm/NewUserForm'
 import { NotAdmin } from '../NotAdmin/NotAdmin'
 
 export const ContentWrapper = ({toggleForm, showNewUserForm}) => {
-  const { state: { userIsAdmin } } = useContext(UserContext)
+  const { state: { userIsAdmin, userDetails } } = useContext(UserContext)
 
   return (
     <Fragment>

@@ -63,6 +63,7 @@ export const UserManagementBoardNewAccess = ({ handleAnimation }) => {
     }
   }
 
+
   return (
     <TableRow className="user-management__container--board__paper__table__new-access">
       <TableCell className="user-management__container--board__paper__table__new-access--no-border">
