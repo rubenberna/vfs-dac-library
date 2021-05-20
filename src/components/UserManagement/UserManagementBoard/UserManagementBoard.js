@@ -107,7 +107,7 @@ export const UserManagementBoard = () => {
                     </TableRow>
                   );
                 })}
-              { showNewAccessRow && <UserManagementBoardNewAccess handleAnimation={setAnimationActive}/>}
+              {showNewAccessRow && <UserManagementBoardNewAccess handleAnimation={setAnimationActive}/> }
             </TableBody>
           </Table>
         </TableContainer>

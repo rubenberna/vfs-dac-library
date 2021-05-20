@@ -35,7 +35,13 @@
             &__toolbar {
               padding-left: 2rem;
               padding-right: 1rem;
-              &--default {}
+              &--default {
+                .table-title {
+                  flex: 1 1 100%;
+                  color: $color-grey-two;
+                  font-weight: 400;
+                }
+              }
               &--highlight {
                 color: $color-danger;
                 background-color: rgba(245, 0, 87, 0.08);
@@ -45,10 +51,6 @@
                   align-items: center;
                   justify-content: space-between;
                 }
-              }
-              .table-title {
-                flex: 1 1 100%;
-                color: $color-grey-FOUR;
               }
             }
             &__new-access {

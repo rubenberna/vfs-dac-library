@@ -23,9 +23,9 @@ export const UserManagementBoardTableToolbar = ({ selected, handleRemoval }) => 
   }
 
   const renderTitle = () => (
-    <h3 className='table-title heading-secondary'>
+    <h4 className='table-title'>
       Current access
-    </h3>
+    </h4>
   )
 
   const renderDeleteAccess = (numSelected, isLoading) => (
