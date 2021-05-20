@@ -6,7 +6,7 @@ export const NotAdmin = () => {
   const bull = <span className="bullet">•</span>;
 
   return (
-    <Card className="no-admin" variant="outlined">
+    <Card className="no-admin u-centered" variant="outlined">
       <CardContent>
         <h2 className="no-admin__title">
           Sorry!
@@ -15,7 +15,7 @@ export const NotAdmin = () => {
           re{bull}strict{bull}ed
         </p>
         <p className="no-admin__dictionary">
-          adjective
+          admin level
         </p>
         <p className="no-admin__text">
           You need to be an Admin to manage users accesses.

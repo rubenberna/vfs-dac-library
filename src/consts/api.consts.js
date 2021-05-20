@@ -7,4 +7,5 @@ export const URL_PATHS = {
   DELETE_ACCESS: 'DeleteAccess',
   CREATE_USER: 'CreateUser',
   DELETE_USER: 'DeleteUser',
+  FIND_ADMIN: 'FindAdmin',
 }

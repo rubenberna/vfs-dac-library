@@ -1,19 +1,24 @@
 import createDataContextHelper from '../createDataContextHelper'
-import { getUserSec, deleteAccess, getUser } from '../../api/dac.api'
+import { getUserSec, deleteAccess, getUser, findAdminByEmail } from '../../api/dac.api'
 import { msalAcquireTokenSilent } from '../../utils/security.util'
 import { setAuthInterceptors } from '../../config/api'
+import LocalstorageUtil from '../../utils/localstorage.util'
 
 const TYPES = {
   SET_USER_DETAILS: 'user/setUserDetails',
   SET_USER_SEC: 'user/setUserSec',
   CLEAR_USER: 'user/clearUser',
-  SET_SEARCH_OPTIONS: 'user/setSearchOptions'
+  SET_SEARCH_OPTIONS: 'user/setSearchOptions',
+  SET_USER_IS_ADMIN: 'user/setUserIsAdmin',
+  SET_LOADING: 'user/setLoading'
 }
 
 const initialState = {
   userDetails: undefined,
   userSec: undefined,
-  searchOptions: []
+  searchOptions: [],
+  userIsAdmin: false,
+  loading: false
 }
 
 const userReducer = (state, action) => {
@@ -26,6 +31,10 @@ const userReducer = (state, action) => {
       return initialState
     case TYPES.SET_SEARCH_OPTIONS:
       return { ...state, searchOptions: action.payload }
+    case TYPES.SET_USER_IS_ADMIN:
+      return { ...state, userIsAdmin: action.payload }
+    case TYPES.SET_LOADING:
+      return { ...state, loading: action.payload }
     default:
       return state
   }
@@ -72,8 +81,28 @@ const clearUser = dispatch => () => {
   })
 }
 
-export const login = (dispatch) => async () => {
+const checkIfUserIsAdmin = async () => {
+  const dummyAccount = 'anthony.de.smet@consultant.volvo.com'
+  const account = (LocalstorageUtil.getAccount()).username
+  const { data } = await findAdminByEmail(account)
+  return !!data[0].length
+}
+
+const login = (dispatch) => async () => {
+  dispatch({
+    type: TYPES.SET_LOADING,
+    payload: true
+  })
   await msalAcquireTokenSilent()
+  const userIsAdmin = await checkIfUserIsAdmin()
+  dispatch({
+    type: TYPES.SET_USER_IS_ADMIN,
+    payload: userIsAdmin
+  })
+  dispatch({
+    type: TYPES.SET_LOADING,
+    payload: false
+  })
 }
 
 export const { Provider, Context } = createDataContextHelper(
