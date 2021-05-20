@@ -10,7 +10,7 @@ export const App = () => {
   const { state: { userDetails, userIsAdmin, loading }, clearUser, login, isLoggedInUserAdmin, setLoading } = useContext(UserContext)
   const [showNewUserForm, setShowNewUserForm] = useState(false)
 
-  const toggleForm = () => {
+  const toggleNewUserForm = () => {
     if (userDetails) {
       clearUser()
     }
@@ -36,7 +36,7 @@ export const App = () => {
         ?
         <LogoLoader/>
         :
-        <ContentWrapper toggleForm={toggleForm} showNewUserForm={showNewUserForm}/>
+        <ContentWrapper toggleNewUserForm={toggleNewUserForm} showNewUserForm={showNewUserForm}/>
       }
     </Fragment>
   )

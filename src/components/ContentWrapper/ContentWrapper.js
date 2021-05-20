@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import { NewUserForm } from '../NewUserForm/NewUserForm'
 import { NotAdmin } from '../NotAdmin/NotAdmin'
 
-export const ContentWrapper = ({toggleForm, showNewUserForm}) => {
+export const ContentWrapper = ({toggleNewUserForm, showNewUserForm}) => {
   const { state: { userIsAdmin, userDetails } } = useContext(UserContext)
 
   return (
@@ -19,13 +19,14 @@ export const ContentWrapper = ({toggleForm, showNewUserForm}) => {
           <Button
             variant="contained"
             className='button-main'
-            onClick={toggleForm}>
+            onClick={toggleNewUserForm}>
             {
               !showNewUserForm ? 'Add user' : 'Cancel'
             }
           </Button>
-          {showNewUserForm && !userDetails && <NewUserForm toggleForm={toggleForm}/>}
-          <UserManagement/>
+          {
+            showNewUserForm && !userDetails ? <NewUserForm toggleNewUserForm={toggleNewUserForm}/> : <UserManagement/>
+          }
         </div>
         : <NotAdmin/>
       }

@@ -27,12 +27,12 @@ export const UserManagementDetails = () => {
   }, [userDetails])
 
   const showAdminDetails = () => {
-    const adminClass = seletecUserIsAdmin ? 'admin' : 'not-admin';
+    const adminClass = seletecUserIsAdmin ? 'is-admin' : 'not-admin';
     const text = seletecUserIsAdmin ? 'Admin' : 'Not Admin';
 
     return (
-      <div>
-        <span className={`user-management__container--details--${adminClass} u-margin-right-small`}>
+      <div className="user-management__container--details__admin">
+        <span className={`user-management__container--details__admin--${adminClass} u-margin-right-small`}>
           {text}
         </span>
         <FormControlLabel
@@ -59,20 +59,13 @@ export const UserManagementDetails = () => {
 
   return (
     <div className='user-management__container--details'>
-      <div className='u-flex u-flex__vertical u-margin-bottom-small'>
+      <div className='u-flex u-flex__vertical'>
         <span className='heading-tertiary u-primary-color u-letter-spacing'>
           {userDetails.USER_NAME}
         </span>
         <span>{userDetails.USER_DBNAME}</span>
         <span>{userDetails.USER_ACCOUNT_ID}</span>
         { showAdminDetails() }
-        <FormControlLabel
-          control={<Switch
-            name="seletecUserIsAdmin"
-            color="primary"
-            checked={seletecUserIsAdmin}
-            onChange={handleSwitchChange}/>}
-        />
       </div>
       <Button className='button-danger' onClick={() => setShowConfirmation(true)}>delete user</Button>
       {

@@ -10,7 +10,7 @@ import { validateEmailRegex } from '../../utils/newUser.util'
 import { IconCancel } from '../../assets/images/iconCancel'
 import IconButton from '@material-ui/core/IconButton'
 
-export const NewUserForm = ({ toggleForm }) => {
+export const NewUserForm = ({ toggleNewUserForm }) => {
   const [errors, setErrors] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState(null)
@@ -90,7 +90,7 @@ export const NewUserForm = ({ toggleForm }) => {
         type: 'success',
         text: 'Saved!'
       })
-      setTimeout(() => toggleForm(), 2000)
+      setTimeout(() => toggleNewUserForm(), 2000)
     } catch (e) {
       console.log(e)
       setIsLoading(false)

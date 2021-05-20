@@ -28,7 +28,7 @@ const userReducer = (state, action) => {
     case TYPES.SET_USER_SEC:
       return { ...state, userSec: action.payload }
     case TYPES.CLEAR_USER:
-      return initialState
+      return {...initialState, userIsAdmin: state.userIsAdmin }
     case TYPES.SET_SEARCH_OPTIONS:
       return { ...state, searchOptions: action.payload }
     case TYPES.SET_USER_IS_ADMIN:

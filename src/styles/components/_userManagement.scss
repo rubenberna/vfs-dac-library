@@ -76,14 +76,18 @@
     &--details {
       width: 20%;
       line-height: 2.5rem;
-      &--admin {
-        color: $color-volvo-blue;
-        font-weight: 600;
-        font-size: $small-font-size;
-      }
-      &--not-admin {
-        color: $color-grey-two;
-        font-size: $small-font-size;
+      &__admin {
+        margin-top: 1.5rem;
+
+        &--is-admin {
+          color: $color-volvo-blue;
+          font-weight: 600;
+          font-size: $small-font-size;
+        }
+        &--not-admin {
+          color: $color-grey-two;
+          font-size: $small-font-size;
+        }
       }
     }
   }
