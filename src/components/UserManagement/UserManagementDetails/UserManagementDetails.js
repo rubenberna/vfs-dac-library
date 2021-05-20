@@ -66,6 +66,13 @@ export const UserManagementDetails = () => {
         <span>{userDetails.USER_DBNAME}</span>
         <span>{userDetails.USER_ACCOUNT_ID}</span>
         { showAdminDetails() }
+        <FormControlLabel
+          control={<Switch
+            name="seletecUserIsAdmin"
+            color="primary"
+            checked={seletecUserIsAdmin}
+            onChange={handleSwitchChange}/>}
+        />
       </div>
       <Button className='button-danger' onClick={() => setShowConfirmation(true)}>delete user</Button>
       {
