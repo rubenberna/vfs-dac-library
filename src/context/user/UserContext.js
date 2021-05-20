@@ -1,5 +1,5 @@
 import createDataContextHelper from '../createDataContextHelper'
-import { getUserSec, deleteAccess, getUser, findAdminByEmail } from '../../api/dac.api'
+import { getUserSec, deleteAccess, getUser, findAdminByEmail, addAdmin, deleteAdmin } from '../../api/dac.api'
 import { msalAcquireTokenSilent } from '../../utils/security.util'
 import { setAuthInterceptors } from '../../config/api'
 import LocalstorageUtil from '../../utils/localstorage.util'
@@ -81,32 +81,56 @@ const clearUser = dispatch => () => {
   })
 }
 
-const checkIfUserIsAdmin = async () => {
+const isLoggedInUserAdmin = (dispatch) => async () => {
   const dummyAccount = 'anthony.de.smet@consultant.volvo.com'
   const account = (LocalstorageUtil.getAccount()).username
   const { data } = await findAdminByEmail(account)
-  return !!data[0].length
-}
-
-const login = (dispatch) => async () => {
-  dispatch({
-    type: TYPES.SET_LOADING,
-    payload: true
-  })
-  await msalAcquireTokenSilent()
-  const userIsAdmin = await checkIfUserIsAdmin()
+  const userIsAdmin = !!data[0].length
   dispatch({
     type: TYPES.SET_USER_IS_ADMIN,
     payload: userIsAdmin
   })
+}
+
+const isSelectedUserAdmin = (dispatch) => async (userEmail) => {
+  const { data } = await findAdminByEmail(userEmail)
+  const userIsAdmin = !!data[0].length
+  return userIsAdmin
+}
+
+const login = (dispatch) => async () => {
+  await msalAcquireTokenSilent()
+}
+
+const makeAdmin = (dispatch) => async (user_tk) => {
+  return await addAdmin(user_tk)
+}
+
+const removeAdmin = (dispatch) => async (user_tk) => {
+  return await deleteAdmin(user_tk)
+}
+
+export const setLoading = (dispatch) => async (boolean) => {
   dispatch({
     type: TYPES.SET_LOADING,
-    payload: false
+    payload: boolean
   })
 }
 
 export const { Provider, Context } = createDataContextHelper(
   userReducer,
-  { setUser, setUserSec, removeAccess, clearUser, setSearchOptions, login },
+  {
+    setUser,
+    setUserSec,
+    removeAccess,
+    clearUser,
+    setSearchOptions,
+    login,
+    makeAdmin,
+    removeAdmin,
+    isLoggedInUserAdmin,
+    setLoading,
+    isSelectedUserAdmin
+  },
   initialState
 )

@@ -7,7 +7,7 @@ import '../styles/main.scss'
 
 export const App = () => {
   const { loadDAMInfo, loadDimensionData } = useContext(NewAccessContext)
-  const { state: { userDetails, userIsAdmin, loading }, clearUser, login } = useContext(UserContext)
+  const { state: { userDetails, userIsAdmin, loading }, clearUser, login, isLoggedInUserAdmin, setLoading } = useContext(UserContext)
   const [showNewUserForm, setShowNewUserForm] = useState(false)
 
   const toggleForm = () => {
@@ -19,7 +19,10 @@ export const App = () => {
 
   useEffect(() => {
     ;(async () => {
+      setLoading(true)
       await login()
+      await isLoggedInUserAdmin()
+      setLoading(false)
       await Promise.all([
         loadDAMInfo(),
         loadDimensionData()

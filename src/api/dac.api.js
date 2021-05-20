@@ -43,3 +43,9 @@ export const findAdminByEmail = email =>
     }
   })
 
+export const addAdmin = user_tk =>
+  client.post(URL_PATHS.ADD_ADMIN, { user_tk })
+
+export const deleteAdmin = user_tk => 
+  client.post(URL_PATHS.DELETE_ADMIN, { user_tk })
+
