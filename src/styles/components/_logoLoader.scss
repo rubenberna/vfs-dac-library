@@ -2,16 +2,22 @@
   width: 15rem;
 }
 
-.rotate {
-  animation: rotation 2s infinite linear;
+.pulsate {
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
   }
-  to {
-    transform: rotate(359deg);
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
   }
 }
 
